@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="br.com.yanfalcao.boaviagem">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:ignore="GoogleAppIndexingWarning">
+        <activity
+                android:name=".login_activity"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".dashboard_activity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".new_travel_activity">
+        </activity>
+        <activity android:name=".new_expense_activity">
+        </activity>
+        <activity android:name=".TravelListActivity">
+        </activity>
+        <activity android:name=".ExpenseListActivity">
+        </activity>
+    </application>
+
+</manifest>

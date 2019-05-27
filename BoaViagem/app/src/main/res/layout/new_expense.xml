@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorLightBlue"
+                android:orientation="vertical" >
+
+            <TextView
+                    android:id="@+id/destino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/novo_gasto"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:typeface="monospace"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+                style="@style/newTraveltextView"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/categor_a"/>
+
+        <Spinner
+                android:id="@+id/categoria"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rount_select_date"
+                android:prompt="@id/categoria">
+
+        </Spinner>
+
+        <TableRow>
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/valor"
+                    style="@style/newTraveltextView"/>
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/data"
+                    style="@style/newTraveltextView"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                    android:id="@+id/valor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    style="@style/newTravelEditText"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/rount_edit_text"/>
+
+            <Button
+                    android:id="@+id/data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="selecionarData"
+                    android:text="@string/selecione"
+                    android:background="@drawable/rount_select_date"/>
+
+        </TableRow>
+
+        <TextView
+                android:layout_gravity="left"
+                android:text="@string/descri_o"
+                style="@style/newTraveltextView"/>
+
+        <EditText
+                android:id="@+id/descricao"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                style="@style/newTravelEditText"
+                android:inputType="text"
+                android:background="@drawable/rount_edit_text"/>
+
+        <TextView
+                android:layout_gravity="left"
+                android:text="@string/local"
+                style="@style/newTraveltextView"/>
+
+        <EditText
+                android:id="@+id/local"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                style="@style/newTravelEditText"
+                android:inputType="text"
+                android:background="@drawable/rount_edit_text"/>
+
+        <Button
+                android:id="@+id/novo_gasto"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:onClick="registrarGastos"
+                android:background="@drawable/rount_button_expense"
+                android:text="@string/salvar"
+                android:textColor="@color/white"/>
+
+    </TableLayout>
+
+</ScrollView>

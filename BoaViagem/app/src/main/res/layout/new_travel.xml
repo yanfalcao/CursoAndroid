@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".new_travel_activity">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2">
+
+        <LinearLayout
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@color/colorLightGreen"
+            android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/nova_viagem"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:typeface="monospace"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+                android:text="@string/destino"
+                style="@style/newTraveltextView"
+                android:layout_marginTop="30dp"/>
+
+        <EditText
+                android:id="@+id/destino"
+                android:layout_height="50dp"
+                style="@style/newTravelEditText"
+                android:inputType="text"
+                android:background="@drawable/rount_edit_text"/>
+
+        <TextView
+                android:text="@string/tipo_da_viagem"
+                style="@style/newTraveltextView"/>
+
+        <RadioGroup
+                android:id="@+id/tipoViagem"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+            <RadioButton
+                    android:id="@+id/lazer"
+                    android:checked="true"
+                    android:layout_marginLeft="5dp"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:text="@string/lazer" android:layout_marginStart="5dp"/>
+
+            <RadioButton
+                    android:id="@+id/negocios"
+
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:layout_marginLeft="80dp"
+                    android:text="@string/negoc_os" android:layout_marginStart="80dp"/>
+        </RadioGroup>
+
+        <TableRow>
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/data_de_chegada"
+                    style="@style/newTraveltextView"/>
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/data_de_sa_da"
+                    style="@style/newTraveltextView"/>
+        </TableRow>
+
+        <TableRow
+                android:layout_marginBottom="15dp">
+
+            <Button
+                    android:id="@+id/dataChegada"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:onClick="selecionarData"
+                    android:text="@string/selecione"
+                    android:background="@drawable/rount_select_date"/>
+
+            <Button
+                    android:id="@+id/dataSaida"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:onClick="selecionarData"
+                    android:background="@drawable/rount_select_date"
+                    android:text="@string/selecione"/>
+        </TableRow>
+
+        <TextView
+                android:text="@string/orcamento"
+                style="@style/newTraveltextView"/>
+
+        <EditText
+                android:id="@+id/orcamento"
+                android:layout_height="50dp"
+                style="@style/newTravelEditText"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rount_edit_text"/>
+
+        <TableRow
+                android:layout_marginBottom="60dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/quantidade_de_pessoas"
+                    style="@style/newTraveltextView"
+                    android:gravity="center"/>
+            <EditText
+                    android:id="@+id/quantidadePessoas"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:inputType="number"
+                    android:background="@drawable/rount_edit_text"
+                    />
+        </TableRow>
+
+        <Button
+                android:onClick="salvarViagem"
+                android:background="@drawable/rount_button"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/salvar"
+                android:textAlignment="center"/>
+
+    </TableLayout>
+
+</ScrollView>

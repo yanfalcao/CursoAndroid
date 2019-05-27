@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomEditTextLogin" parent="@android:style/TextAppearance">
+        <item name="android:background">@drawable/rount_edit_text</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CustomTextViewLogin" parent="@android:style/TextAppearance">
+        <item name="android:gravity">left</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="dashboardTextView" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorDarkGreen</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="newTraveltextView" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="newTravelEditText" parent="@android:style/TextAppearance">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+</resources>
