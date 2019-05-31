@@ -16,6 +16,17 @@ public class TravelListActivity extends ListActivity
     ArrayList<Map<String, Object>> viagens;
 
     @Override
+    public void onItemClick(AdapterView<?> parent, View view,
+                            int position, long id) {
+        Map<String, Object> map = viagens.get(position);
+        String destino = (String) map.get("destino");
+        String mensagem = "Viagem selecionada: " + destino;
+        Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, ExpenseListActivity.class));
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -47,16 +58,5 @@ public class TravelListActivity extends ListActivity
         viagens.add(item);
 
         return viagens;
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view,
-                            int position, long id) {
-        Map<String, Object> map = viagens.get(position);
-        String destino = (String) map.get("destino");
-        String mensagem = "Viagem selecionada: " + destino;
-        Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, ExpenseListActivity.class));
-
     }
 }
